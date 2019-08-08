@@ -17,7 +17,7 @@
   </p>
 
   <form [formGroup]="form">
-      <input type="text" [formControlName]="fieldName">
+      <input type="text" [formControlName]="person.fieldName">
     </form>
     <pre>{{ form.value | json }}</pre>
 
