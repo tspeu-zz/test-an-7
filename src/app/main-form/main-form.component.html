@@ -1,0 +1,23 @@
+
+
+  <h2>HOLA MAIN FORM</h2>
+
+  <div [ngClass]="{'bold' : isBold, 'highlight': isHight, 'strike': isStrike, 'color': 'aqua'}">ss main-form works! </div>
+
+<p>
+  <label>
+    <input type="checkbox" isBorder="!showStyle">Add border
+  </label>
+</p>
+  <p text-wrap [style.background-color]="getBackColor()"
+
+  (click)="showStyle = !showStyle" [class.rounded-border]="showStyle">
+    The shadow root basically scopes this HTML code and also the styles directly to our component. While the emulated mode works across browsers without any issues, make sure that your current browser that you're targeting supports the shadow DOM.
+
+  </p>
+
+  <form [formGroup]="form">
+      <input type="text" [formControlName]="fieldName">
+    </form>
+    <pre>{{ form.value | json }}</pre>
+
